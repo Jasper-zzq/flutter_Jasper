@@ -5,6 +5,8 @@ class SmartSelectTile extends StatelessWidget {
   /// The value of the selected option.
   final String value;
 
+  final Widget body;
+
   /// The primary content of the list tile.
   final String title;
 
@@ -70,6 +72,7 @@ class SmartSelectTile extends StatelessWidget {
   SmartSelectTile({
     Key key,
     this.value,
+    this.body,
     this.title,
     this.leading,
     this.trailing,
@@ -85,17 +88,22 @@ class SmartSelectTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ListTile(
-      dense: dense,
-      enabled: enabled && isLoading != true,
-      selected: selected,
-      contentPadding: padding,
-      leading: leading,
-      title: Text(title),
-      subtitle: isTwoLine ? _valueWidget : null,
-      trailing: _trailingWidget,
-      onTap: onTap,
-    );
+    return this.body != null
+        ? InkWell(
+            child: this.body,
+            onTap: onTap,
+          )
+        : ListTile(
+            dense: dense,
+            enabled: enabled && isLoading != true,
+            selected: selected,
+            contentPadding: padding,
+            leading: leading,
+            title: Text(title),
+            subtitle: isTwoLine ? _valueWidget : null,
+            trailing: _trailingWidget,
+            onTap: onTap,
+          );
   }
 
   Widget get _trailingWidget {

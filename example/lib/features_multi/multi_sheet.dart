@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:jasper_flutter_componment/jasper_flutter_componment.dart';
+import 'package:jasper_flutter_componment/main.dart';
 import '../options.dart' as options;
 
 class FeaturesMultiSheet extends StatefulWidget {

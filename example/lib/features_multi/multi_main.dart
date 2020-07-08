@@ -12,8 +12,8 @@ class FeaturesMulti extends StatefulWidget {
   _FeaturesMultiState createState() => _FeaturesMultiState();
 }
 
-class _FeaturesMultiState extends State<FeaturesMulti> with AutomaticKeepAliveClientMixin<FeaturesMulti> {
-
+class _FeaturesMultiState extends State<FeaturesMulti>
+    with AutomaticKeepAliveClientMixin<FeaturesMulti> {
   @override
   bool get wantKeepAlive => true;
 
@@ -21,14 +21,14 @@ class _FeaturesMultiState extends State<FeaturesMulti> with AutomaticKeepAliveCl
   Widget build(BuildContext context) {
     super.build(context);
     return Scrollbar(
-      child:ListView(
+      child: ListView(
         children: <Widget>[
           StickyHeader(
             header: FeaturesHeader('Open in Full Page'),
             content: FeaturesMultiPage(),
           ),
           StickyHeader(
-            header: FeaturesHeader('Open in Bottom Sheet'),
+            header: FeaturesHeader('Open in Bottom XXXXXXXXXX'),
             content: FeaturesMultiSheet(),
           ),
           StickyHeader(
@@ -48,4 +48,3 @@ class _FeaturesMultiState extends State<FeaturesMulti> with AutomaticKeepAliveCl
     );
   }
 }
-

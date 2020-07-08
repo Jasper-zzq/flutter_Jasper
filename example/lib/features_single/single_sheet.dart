@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:jasper_flutter_componment/jasper_flutter_componment.dart';
+import 'package:jasper_flutter_componment/main.dart';
 import '../options.dart' as options;
 
 class FeaturesSingleSheet extends StatefulWidget {
@@ -31,6 +31,7 @@ class _FeaturesSingleSheetState extends State<FeaturesSingleSheet> {
         Divider(indent: 20),
         SmartSelect<String>.single(
           title: 'Super Hero',
+          body: Text("????"),
           value: _hero,
           isTwoLine: true,
           options: options.heroes,

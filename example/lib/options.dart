@@ -1,5 +1,4 @@
-import 'package:jasper_flutter_componment/jasper_flutter_componment.dart'
-    show SmartSelectOption;
+import 'package:jasper_flutter_componment/main.dart' show SmartSelectOption;
 
 List<SmartSelectOption<String>> days = [
   SmartSelectOption<String>(value: 'mon', title: 'Monday'),

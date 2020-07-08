@@ -11,8 +11,8 @@ class FeaturesSingle extends StatefulWidget {
   _FeaturesSingleState createState() => _FeaturesSingleState();
 }
 
-class _FeaturesSingleState extends State<FeaturesSingle> with AutomaticKeepAliveClientMixin<FeaturesSingle> {
-
+class _FeaturesSingleState extends State<FeaturesSingle>
+    with AutomaticKeepAliveClientMixin<FeaturesSingle> {
   @override
   bool get wantKeepAlive => true;
 
@@ -20,14 +20,14 @@ class _FeaturesSingleState extends State<FeaturesSingle> with AutomaticKeepAlive
   Widget build(BuildContext context) {
     super.build(context);
     return Scrollbar(
-      child:ListView(
+      child: ListView(
         children: <Widget>[
           StickyHeader(
             header: FeaturesHeader('Open in Full Page'),
             content: FeaturesSinglePage(),
           ),
           StickyHeader(
-            header: FeaturesHeader('Open in Bottom Sheet'),
+            header: FeaturesHeader('Open in Bottom XXXXX'),
             content: FeaturesSingleSheet(),
           ),
           StickyHeader(
@@ -43,4 +43,3 @@ class _FeaturesSingleState extends State<FeaturesSingle> with AutomaticKeepAlive
     );
   }
 }
-
