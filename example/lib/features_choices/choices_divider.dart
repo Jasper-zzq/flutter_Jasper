@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:smart_select/smart_select.dart';
+import 'package:jasper_flutter_componment/jasper_flutter_componment.dart';
 import '../options.dart' as options;
 
 class FeaturesChoicesDivider extends StatefulWidget {
@@ -8,7 +8,6 @@ class FeaturesChoicesDivider extends StatefulWidget {
 }
 
 class _FeaturesChoicesDividerState extends State<FeaturesChoicesDivider> {
-
   String _car = '';
   List<String> _smartphone = [];
 
@@ -28,12 +27,11 @@ class _FeaturesChoicesDividerState extends State<FeaturesChoicesDivider> {
             title: (index, item) => item['title'],
             group: (index, item) => item['body'],
           ),
-          choiceConfig: SmartSelectChoiceConfig(
-            isGrouped: true,
-            useDivider: true
-          ),
+          choiceConfig:
+              SmartSelectChoiceConfig(isGrouped: true, useDivider: true),
           leading: CircleAvatar(
-            backgroundImage: NetworkImage('https://source.unsplash.com/yeVtxxPxzbw/100x100'),
+            backgroundImage:
+                NetworkImage('https://source.unsplash.com/yeVtxxPxzbw/100x100'),
           ),
           onChange: (val) => setState(() => _car = val),
         ),
@@ -58,7 +56,8 @@ class _FeaturesChoicesDividerState extends State<FeaturesChoicesDivider> {
             useDivider: true,
           ),
           leading: CircleAvatar(
-            backgroundImage: NetworkImage('https://source.unsplash.com/xsGxhtAsfSA/100x100'),
+            backgroundImage:
+                NetworkImage('https://source.unsplash.com/xsGxhtAsfSA/100x100'),
           ),
           onChange: (val) => setState(() => _smartphone = val),
         ),

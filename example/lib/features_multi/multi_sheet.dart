@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:smart_select/smart_select.dart';
+import 'package:jasper_flutter_componment/jasper_flutter_componment.dart';
 import '../options.dart' as options;
 
 class FeaturesMultiSheet extends StatefulWidget {
@@ -8,7 +8,6 @@ class FeaturesMultiSheet extends StatefulWidget {
 }
 
 class _FeaturesMultiSheetState extends State<FeaturesMultiSheet> {
-
   List<String> _os = ['and', 'tux'];
   List<String> _hero = ['bat', 'spi'];
 
@@ -24,7 +23,8 @@ class _FeaturesMultiSheetState extends State<FeaturesMultiSheet> {
           options: options.os,
           modalType: SmartSelectModalType.bottomSheet,
           leading: CircleAvatar(
-            backgroundImage: NetworkImage('https://source.unsplash.com/xsGxhtAsfSA/100x100'),
+            backgroundImage:
+                NetworkImage('https://source.unsplash.com/xsGxhtAsfSA/100x100'),
           ),
           onChange: (val) => setState(() => _os = val),
         ),
@@ -36,7 +36,8 @@ class _FeaturesMultiSheetState extends State<FeaturesMultiSheet> {
           options: options.heroes,
           modalType: SmartSelectModalType.bottomSheet,
           leading: CircleAvatar(
-            backgroundImage: NetworkImage('https://source.unsplash.com/8I-ht65iRww/100x100'),
+            backgroundImage:
+                NetworkImage('https://source.unsplash.com/8I-ht65iRww/100x100'),
           ),
           onChange: (val) => setState(() => _hero = val),
         ),

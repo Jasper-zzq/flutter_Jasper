@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:smart_select/smart_select.dart';
+import 'package:jasper_flutter_componment/jasper_flutter_componment.dart';
 import '../options.dart' as options;
 
 class FeaturesModalHeaderless extends StatefulWidget {
   @override
-  _FeaturesModalHeaderlessState createState() => _FeaturesModalHeaderlessState();
+  _FeaturesModalHeaderlessState createState() =>
+      _FeaturesModalHeaderlessState();
 }
 
 class _FeaturesModalHeaderlessState extends State<FeaturesModalHeaderless> {
-
   List<String> _fruit = ['mel'];
   List<String> _hero = ['bat', 'spi'];
 
@@ -44,7 +44,8 @@ class _FeaturesModalHeaderlessState extends State<FeaturesModalHeaderless> {
             useHeader: false,
           ),
           leading: CircleAvatar(
-            backgroundImage: NetworkImage('https://source.unsplash.com/8I-ht65iRww/100x100'),
+            backgroundImage:
+                NetworkImage('https://source.unsplash.com/8I-ht65iRww/100x100'),
           ),
           onChange: (val) => setState(() => _hero = val),
         ),

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:smart_select/smart_select.dart';
+import 'package:jasper_flutter_componment/jasper_flutter_componment.dart';
 import '../options.dart' as options;
 
 class FeaturesSingleSheet extends StatefulWidget {
@@ -8,7 +8,6 @@ class FeaturesSingleSheet extends StatefulWidget {
 }
 
 class _FeaturesSingleSheetState extends State<FeaturesSingleSheet> {
-
   String _os = 'win';
   String _hero = 'iro';
 
@@ -23,7 +22,8 @@ class _FeaturesSingleSheetState extends State<FeaturesSingleSheet> {
           options: options.os,
           isTwoLine: true,
           leading: CircleAvatar(
-            backgroundImage: NetworkImage('https://source.unsplash.com/xsGxhtAsfSA/100x100'),
+            backgroundImage:
+                NetworkImage('https://source.unsplash.com/xsGxhtAsfSA/100x100'),
           ),
           onChange: (val) => setState(() => _os = val),
           modalType: SmartSelectModalType.bottomSheet,
@@ -36,7 +36,8 @@ class _FeaturesSingleSheetState extends State<FeaturesSingleSheet> {
           options: options.heroes,
           modalType: SmartSelectModalType.bottomSheet,
           leading: CircleAvatar(
-            backgroundImage: NetworkImage('https://source.unsplash.com/8I-ht65iRww/100x100'),
+            backgroundImage:
+                NetworkImage('https://source.unsplash.com/8I-ht65iRww/100x100'),
           ),
           onChange: (val) => setState(() => _hero = val),
         ),

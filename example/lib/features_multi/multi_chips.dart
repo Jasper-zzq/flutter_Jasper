@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:smart_select/smart_select.dart';
+import 'package:jasper_flutter_componment/jasper_flutter_componment.dart';
 import '../options.dart' as options;
 
 class FeaturesMultiChips extends StatefulWidget {
@@ -8,7 +8,6 @@ class FeaturesMultiChips extends StatefulWidget {
 }
 
 class _FeaturesMultiChipsState extends State<FeaturesMultiChips> {
-
   List<String> _car = [];
   List<String> _smartphone = [];
   List<String> _day = ['fri'];
@@ -32,7 +31,8 @@ class _FeaturesMultiChipsState extends State<FeaturesMultiChips> {
           choiceConfig: SmartSelectChoiceConfig(isGrouped: true),
           modalConfig: SmartSelectModalConfig(useFilter: true),
           leading: CircleAvatar(
-            backgroundImage: NetworkImage('https://source.unsplash.com/yeVtxxPxzbw/100x100'),
+            backgroundImage:
+                NetworkImage('https://source.unsplash.com/yeVtxxPxzbw/100x100'),
           ),
           onChange: (val) => setState(() => _car = val),
         ),
@@ -47,29 +47,27 @@ class _FeaturesMultiChipsState extends State<FeaturesMultiChips> {
             title: (index, item) => item['name'],
           ),
           modalType: SmartSelectModalType.bottomSheet,
-          modalConfig: SmartSelectModalConfig(
-            useFilter: true
-          ),
+          modalConfig: SmartSelectModalConfig(useFilter: true),
           choiceType: SmartSelectChoiceType.chips,
           leading: CircleAvatar(
-            backgroundImage: NetworkImage('https://source.unsplash.com/xsGxhtAsfSA/100x100'),
+            backgroundImage:
+                NetworkImage('https://source.unsplash.com/xsGxhtAsfSA/100x100'),
           ),
           onChange: (val) => setState(() => _smartphone = val),
         ),
         Divider(indent: 20),
         SmartSelect<String>.multiple(
-          title: 'Days',
-          value: _day,
-          leading: Container(
-            width: 40,
-            alignment: Alignment.center,
-            child: const Icon(Icons.calendar_today),
-          ),
-          options: options.days,
-          choiceType: SmartSelectChoiceType.chips,
-          modalType: SmartSelectModalType.popupDialog,
-          onChange: (val) => setState(() => _day = val)
-        ),
+            title: 'Days',
+            value: _day,
+            leading: Container(
+              width: 40,
+              alignment: Alignment.center,
+              child: const Icon(Icons.calendar_today),
+            ),
+            options: options.days,
+            choiceType: SmartSelectChoiceType.chips,
+            modalType: SmartSelectModalType.popupDialog,
+            onChange: (val) => setState(() => _day = val)),
         Container(height: 7),
       ],
     );

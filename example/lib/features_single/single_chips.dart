@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:smart_select/smart_select.dart';
+import 'package:jasper_flutter_componment/jasper_flutter_componment.dart';
 import '../options.dart' as options;
 
 class FeaturesSingleChips extends StatefulWidget {
@@ -8,7 +8,6 @@ class FeaturesSingleChips extends StatefulWidget {
 }
 
 class _FeaturesSingleChipsState extends State<FeaturesSingleChips> {
-
   String _car = '';
   String _category = '';
   String _day = 'fri';
@@ -43,7 +42,8 @@ class _FeaturesSingleChipsState extends State<FeaturesSingleChips> {
           choiceType: SmartSelectChoiceType.chips,
           choiceConfig: SmartSelectChoiceConfig(isGrouped: true),
           leading: CircleAvatar(
-            backgroundImage: NetworkImage('https://source.unsplash.com/yeVtxxPxzbw/100x100'),
+            backgroundImage:
+                NetworkImage('https://source.unsplash.com/yeVtxxPxzbw/100x100'),
           ),
           onChange: (val) => setState(() => _car = val),
         ),
@@ -64,19 +64,18 @@ class _FeaturesSingleChipsState extends State<FeaturesSingleChips> {
         ),
         Divider(indent: 20),
         SmartSelect<String>.single(
-          title: 'Days',
-          value: _day,
-          isTwoLine: true,
-          leading: Container(
-            width: 40,
-            alignment: Alignment.center,
-            child: const Icon(Icons.calendar_today),
-          ),
-          options: options.days,
-          choiceType: SmartSelectChoiceType.chips,
-          modalType: SmartSelectModalType.popupDialog,
-          onChange: (val) => setState(() => _day = val)
-        ),
+            title: 'Days',
+            value: _day,
+            isTwoLine: true,
+            leading: Container(
+              width: 40,
+              alignment: Alignment.center,
+              child: const Icon(Icons.calendar_today),
+            ),
+            options: options.days,
+            choiceType: SmartSelectChoiceType.chips,
+            modalType: SmartSelectModalType.popupDialog,
+            onChange: (val) => setState(() => _day = val)),
         Container(height: 7),
       ],
     );

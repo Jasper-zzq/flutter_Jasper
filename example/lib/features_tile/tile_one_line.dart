@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:smart_select/smart_select.dart';
+import 'package:jasper_flutter_componment/jasper_flutter_componment.dart';
 import '../options.dart' as options;
 
 class FeaturesTileOneLine extends StatefulWidget {
@@ -8,7 +8,6 @@ class FeaturesTileOneLine extends StatefulWidget {
 }
 
 class _FeaturesTileOneLineState extends State<FeaturesTileOneLine> {
-
   String _day = 'fri';
   List<String> _month = ['apr'];
 
@@ -18,18 +17,16 @@ class _FeaturesTileOneLineState extends State<FeaturesTileOneLine> {
       children: <Widget>[
         Container(height: 7),
         SmartSelect<String>.single(
-          title: 'Days',
-          value: _day,
-          options: options.days,
-          onChange: (val) => setState(() => _day = val)
-        ),
+            title: 'Days',
+            value: _day,
+            options: options.days,
+            onChange: (val) => setState(() => _day = val)),
         Divider(indent: 20),
         SmartSelect<String>.multiple(
-          title: 'Month',
-          value: _month,
-          options: options.months,
-          onChange: (val) => setState(() => _month = val)
-        ),
+            title: 'Month',
+            value: _month,
+            options: options.months,
+            onChange: (val) => setState(() => _month = val)),
         Container(height: 7),
       ],
     );

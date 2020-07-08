@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:smart_select/smart_select.dart';
+import 'package:jasper_flutter_componment/jasper_flutter_componment.dart';
 import '../options.dart' as options;
 
 class FeaturesChoicesGrouped extends StatefulWidget {
@@ -8,7 +8,6 @@ class FeaturesChoicesGrouped extends StatefulWidget {
 }
 
 class _FeaturesChoicesGroupedState extends State<FeaturesChoicesGrouped> {
-
   String _smartphone = '';
   List<String> _car = [];
 
@@ -31,7 +30,8 @@ class _FeaturesChoicesGroupedState extends State<FeaturesChoicesGrouped> {
           modalType: SmartSelectModalType.bottomSheet,
           choiceConfig: SmartSelectChoiceConfig(isGrouped: true),
           leading: CircleAvatar(
-            backgroundImage: NetworkImage('https://source.unsplash.com/xsGxhtAsfSA/100x100'),
+            backgroundImage:
+                NetworkImage('https://source.unsplash.com/xsGxhtAsfSA/100x100'),
           ),
           onChange: (val) => setState(() => _smartphone = val),
         ),
@@ -54,7 +54,8 @@ class _FeaturesChoicesGroupedState extends State<FeaturesChoicesGrouped> {
           ),
           choiceConfig: SmartSelectChoiceConfig(isGrouped: true),
           leading: CircleAvatar(
-            backgroundImage: NetworkImage('https://source.unsplash.com/yeVtxxPxzbw/100x100'),
+            backgroundImage:
+                NetworkImage('https://source.unsplash.com/yeVtxxPxzbw/100x100'),
           ),
           onChange: (val) => setState(() => _car = val),
         ),

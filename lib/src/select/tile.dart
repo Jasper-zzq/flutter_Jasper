@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 
 /// Default trigger widget
 class SmartSelectTile extends StatelessWidget {
-
   /// The value of the selected option.
   final String value;
 

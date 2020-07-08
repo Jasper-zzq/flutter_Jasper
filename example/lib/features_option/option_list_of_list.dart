@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:smart_select/smart_select.dart';
+import 'package:jasper_flutter_componment/jasper_flutter_componment.dart';
 
 class FeaturesOptionListOfList extends StatefulWidget {
   @override
-  _FeaturesOptionListOfListState createState() => _FeaturesOptionListOfListState();
+  _FeaturesOptionListOfListState createState() =>
+      _FeaturesOptionListOfListState();
 }
 
 class _FeaturesOptionListOfListState extends State<FeaturesOptionListOfList> {
-
   String _month = 'apr';
 
   List<List<String>> monthsOption = [
@@ -31,15 +31,14 @@ class _FeaturesOptionListOfListState extends State<FeaturesOptionListOfList> {
       children: <Widget>[
         Container(height: 7),
         SmartSelect<String>.single(
-          title: 'Month',
-          value: _month,
-          options: SmartSelectOption.listFrom<String, List<String>>(
-            source: monthsOption,
-            value: (index, item) => item[0],
-            title: (index, item) => item[1],
-          ),
-          onChange: (val) => setState(() => _month = val)
-        ),
+            title: 'Month',
+            value: _month,
+            options: SmartSelectOption.listFrom<String, List<String>>(
+              source: monthsOption,
+              value: (index, item) => item[0],
+              title: (index, item) => item[1],
+            ),
+            onChange: (val) => setState(() => _month = val)),
         Container(height: 7),
       ],
     );

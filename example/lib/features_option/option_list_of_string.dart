@@ -1,25 +1,33 @@
 import 'package:flutter/material.dart';
-import 'package:smart_select/smart_select.dart';
+import 'package:jasper_flutter_componment/jasper_flutter_componment.dart';
 
 class FeaturesOptionListOfString extends StatefulWidget {
   @override
-  _FeaturesOptionListOfStringState createState() => _FeaturesOptionListOfStringState();
+  _FeaturesOptionListOfStringState createState() =>
+      _FeaturesOptionListOfStringState();
 }
 
-class _FeaturesOptionListOfStringState extends State<FeaturesOptionListOfString> {
-
+class _FeaturesOptionListOfStringState
+    extends State<FeaturesOptionListOfString> {
   List<int> _categories = [];
 
   int _sort = 3;
 
   List<String> _categoriesOption = [
-    'Electronics', 'Accessories', 'Smartwatch',
-    'Smartphone', 'Audio & Video', 'Scientific'
+    'Electronics',
+    'Accessories',
+    'Smartwatch',
+    'Smartphone',
+    'Audio & Video',
+    'Scientific'
   ];
 
   List<String> _sortOption = [
-    'Popular', 'Most Reviews', 'Newest',
-    'Low Price', 'High Price',
+    'Popular',
+    'Most Reviews',
+    'Newest',
+    'Low Price',
+    'High Price',
   ];
 
   @override

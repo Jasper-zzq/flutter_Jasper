@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:smart_select/smart_select.dart';
+import 'package:jasper_flutter_componment/jasper_flutter_componment.dart';
 import '../options.dart' as options;
 
 class FeaturesMultiPopup extends StatefulWidget {
@@ -8,7 +8,6 @@ class FeaturesMultiPopup extends StatefulWidget {
 }
 
 class _FeaturesMultiPopupState extends State<FeaturesMultiPopup> {
-
   List<String> _fruit = ['mel'];
   List<String> _framework = ['flu'];
 
@@ -47,10 +46,8 @@ class _FeaturesMultiPopupState extends State<FeaturesMultiPopup> {
               ),
               leading: CircleAvatar(
                 backgroundColor: Colors.blue,
-                child: Text(
-                  _framework.length.toString(),
-                  style: TextStyle(color: Colors.white)
-                ),
+                child: Text(_framework.length.toString(),
+                    style: TextStyle(color: Colors.white)),
               ),
               trailing: Icon(Icons.keyboard_arrow_right, color: Colors.grey),
               onTap: () => showOptions(context),

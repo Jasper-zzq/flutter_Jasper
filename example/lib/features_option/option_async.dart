@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:smart_select/smart_select.dart';
+import 'package:jasper_flutter_componment/jasper_flutter_componment.dart';
 import 'package:dio/dio.dart';
 
 class FeaturesOptionAsync extends StatefulWidget {
@@ -8,7 +8,6 @@ class FeaturesOptionAsync extends StatefulWidget {
 }
 
 class _FeaturesOptionAsyncState extends State<FeaturesOptionAsync> {
-
   String _user;
   List<SmartSelectOption<String>> _users = [];
   bool _usersIsLoading;
@@ -43,8 +42,8 @@ class _FeaturesOptionAsyncState extends State<FeaturesOptionAsync> {
               leading: Builder(
                 builder: (context) {
                   String avatarUrl = state.valueObject != null
-                    ? state.valueObject.meta['picture']['thumbnail']
-                    : 'https://source.unsplash.com/8I-ht65iRww/100x100';
+                      ? state.valueObject.meta['picture']['thumbnail']
+                      : 'https://source.unsplash.com/8I-ht65iRww/100x100';
                   return CircleAvatar(
                     backgroundImage: NetworkImage(avatarUrl),
                   );
@@ -88,12 +87,15 @@ class _FeaturesOptionAsyncState extends State<FeaturesOptionAsync> {
   void _getUsers() async {
     try {
       setState(() => _usersIsLoading = true);
-      String url = "https://randomuser.me/api/?inc=gender,name,nat,picture,email&results=25";
+      String url =
+          "https://randomuser.me/api/?inc=gender,name,nat,picture,email&results=25";
       Response res = await Dio().get(url);
-      List<SmartSelectOption> options = SmartSelectOption.listFrom<String, dynamic>(
+      List<SmartSelectOption> options =
+          SmartSelectOption.listFrom<String, dynamic>(
         source: res.data['results'],
         value: (index, item) => item['email'],
-        title: (index, item) => item['name']['first'] + ' ' + item['name']['last'],
+        title: (index, item) =>
+            item['name']['first'] + ' ' + item['name']['last'],
         subtitle: (index, item) => item['email'],
         group: (index, item) => item['gender'],
         meta: (index, item) => item,
@@ -109,7 +111,8 @@ class _FeaturesOptionAsyncState extends State<FeaturesOptionAsync> {
   void _getCountries() async {
     try {
       setState(() => _countriesIsLoading = true);
-      String url = "http://restcountries.eu/rest/v2/all?fields=name;capital;flag;region;subregion";
+      String url =
+          "http://restcountries.eu/rest/v2/all?fields=name;capital;flag;region;subregion";
       Response res = await Dio().get(url);
       setState(() {
         _countries = SmartSelectOption.listFrom<String, dynamic>(

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:smart_select/smart_select.dart';
+import 'package:jasper_flutter_componment/jasper_flutter_componment.dart';
 
 class FeaturesOptionHidden extends StatefulWidget {
   @override
@@ -7,19 +7,25 @@ class FeaturesOptionHidden extends StatefulWidget {
 }
 
 class _FeaturesOptionHiddenState extends State<FeaturesOptionHidden> {
-
   List<int> _categories = [];
 
   int _sort = 0;
 
   List<String> _categoriesOption = [
-    'Electronics', 'Accessories', 'Smartwatch',
-    'Smartphone', 'Audio & Video', 'Scientific'
+    'Electronics',
+    'Accessories',
+    'Smartwatch',
+    'Smartphone',
+    'Audio & Video',
+    'Scientific'
   ];
 
   List<String> _sortOption = [
-    'Popular', 'Most Reviews', 'Newest',
-    'Low Price', 'High Price',
+    'Popular',
+    'Most Reviews',
+    'Newest',
+    'Low Price',
+    'High Price',
   ];
 
   @override
@@ -69,7 +75,8 @@ class _FeaturesOptionHiddenState extends State<FeaturesOptionHidden> {
                     source: _sortOption,
                     value: (index, item) => index,
                     title: (index, item) => item,
-                    hidden: (index, item) => item.toLowerCase().contains('price'),
+                    hidden: (index, item) =>
+                        item.toLowerCase().contains('price'),
                   ),
                   modalType: SmartSelectModalType.popupDialog,
                   modalConfig: SmartSelectModalConfig(

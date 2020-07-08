@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:smart_select/smart_select.dart';
+import 'package:jasper_flutter_componment/jasper_flutter_componment.dart';
 import '../options.dart' as options;
 
 class FeaturesModalConfirm extends StatefulWidget {
@@ -8,7 +8,6 @@ class FeaturesModalConfirm extends StatefulWidget {
 }
 
 class _FeaturesModalConfirmState extends State<FeaturesModalConfirm> {
-
   List<String> _day = ['fri'];
   List<String> _fruit = ['mel'];
   String _hero = 'iro';
@@ -19,19 +18,19 @@ class _FeaturesModalConfirmState extends State<FeaturesModalConfirm> {
       children: <Widget>[
         Container(height: 7),
         SmartSelect<String>.multiple(
-          title: 'Days',
-          value: _day,
-          isTwoLine: true,
-          options: options.days,
-          modalType: SmartSelectModalType.fullPage,
-          modalConfig: SmartSelectModalConfig(
-            useConfirmation: true,
-          ),
-          leading: CircleAvatar(
-            backgroundImage: NetworkImage('https://source.unsplash.com/xsGxhtAsfSA/100x100'),
-          ),
-          onChange: (val) => setState(() => _day = val)
-        ),
+            title: 'Days',
+            value: _day,
+            isTwoLine: true,
+            options: options.days,
+            modalType: SmartSelectModalType.fullPage,
+            modalConfig: SmartSelectModalConfig(
+              useConfirmation: true,
+            ),
+            leading: CircleAvatar(
+              backgroundImage: NetworkImage(
+                  'https://source.unsplash.com/xsGxhtAsfSA/100x100'),
+            ),
+            onChange: (val) => setState(() => _day = val)),
         Divider(indent: 20),
         SmartSelect<String>.multiple(
           title: 'Fruit',
@@ -60,7 +59,8 @@ class _FeaturesModalConfirmState extends State<FeaturesModalConfirm> {
             useConfirmation: true,
           ),
           leading: CircleAvatar(
-            backgroundImage: NetworkImage('https://source.unsplash.com/8I-ht65iRww/100x100'),
+            backgroundImage:
+                NetworkImage('https://source.unsplash.com/8I-ht65iRww/100x100'),
           ),
           onChange: (val) => setState(() => _hero = val),
         ),

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:smart_select/smart_select.dart';
+import 'package:jasper_flutter_componment/jasper_flutter_componment.dart';
 import '../options.dart' as options;
 
 class FeaturesTileLoading extends StatefulWidget {
@@ -8,7 +8,6 @@ class FeaturesTileLoading extends StatefulWidget {
 }
 
 class _FeaturesTileLoadingState extends State<FeaturesTileLoading> {
-
   String _day = 'fri';
   List<String> _month = ['apr'];
 

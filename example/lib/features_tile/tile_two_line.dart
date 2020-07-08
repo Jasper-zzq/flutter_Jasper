@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:smart_select/smart_select.dart';
+import 'package:jasper_flutter_componment/jasper_flutter_componment.dart';
 import '../options.dart' as options;
 
 class FeaturesTileTwoLine extends StatefulWidget {
@@ -8,7 +8,6 @@ class FeaturesTileTwoLine extends StatefulWidget {
 }
 
 class _FeaturesTileTwoLineState extends State<FeaturesTileTwoLine> {
-
   String _day = 'fri';
   List<String> _month = ['apr'];
 
